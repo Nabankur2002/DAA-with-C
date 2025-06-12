@@ -1,3 +1,5 @@
+//Given a sorted array and a number 'X'. Search the elements of the arraysuch that their sum is 'X'. Time complexity O(n)
+
 #include <stdio.h>
 
 // Function to find pair
