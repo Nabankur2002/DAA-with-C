@@ -38,7 +38,7 @@ void primMST(int cost[MAXV][MAXV], int N)
     printf("Selected edges with their weights:\n");
     for (int i = 1; i < N; i++)
     {
-        printf("%d %d %d\n", p[i], i, cost[p[i]][i]);
+        printf("Edges are %d, %d, Cost is %d\n", p[i], i, cost[p[i]][i]);
         tc+= cost[p[i]][i];
     }
     printf("Total minimum cost: %d\n", tc);
