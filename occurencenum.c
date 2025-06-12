@@ -1,3 +1,5 @@
+//Given a sorted array 'X'. Write a function that counts the occurrence of 'X' in an array.The time complexity must be O(logn) 
+
 #include<stdio.h>
 int countfreq(int arr[], int size, int x)
 {
