@@ -4,7 +4,7 @@
 #define MAXV 100
 
 void bfs(int graph[][MAXV], int n, int start) {
-    int visited[MAXV] = {0};
+    int visited[MAXV] = {0}; //initializes all the elements of the array to 0. i.e visited[1]=0. visited[2]=0 and so on
     int queue[MAXV];
     int front = -1, rear = -1;
 
@@ -26,7 +26,7 @@ void bfs(int graph[][MAXV], int n, int start) {
 }
 
 void dfs(int graph[][MAXV], int n, int start) {
-    int visited[MAXV] = {0};
+    int visited[MAXV] = {0}; //initializes all the elements of the array to 0. i.e visited[1]=0. visited[2]=0 and so on
     int stack[MAXV];
     int top = -1;
 
