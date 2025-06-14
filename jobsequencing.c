@@ -16,9 +16,14 @@ int compare(const void *a, const void *b) {
     return (temp2->profit - temp1->profit);
 }
 
-// Find minimum between two numbers
 int min(int num1, int num2) {
-    return (num1 > num2) ? num2 : num1;
+    // Check if num1 is greater than num2
+    if (num1 > num2) {
+        return num2; // If yes, return num2 as it is smaller
+    } 
+    else {
+        return num1; // Otherwise, return num1
+    }
 }
 
 int main() {
@@ -40,8 +45,9 @@ int main() {
     int result[n];    // To store result sequence of jobs
     bool slot[n];     // To keep track of free time slots
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++){
         slot[i] = false;
+    }
     
     
     int totalProfit = 0;
