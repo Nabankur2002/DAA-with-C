@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 #define INF 999 //Infinity is regarded as 999
-#define MAX 10 //maximum number of vertices handled by the graph
+#define MAXN 50 //maximum number of vertices handled by the graph
 
-int W[MAX][MAX]; // Adjacency matrix
-int d[MAX];      // Distance array
-int p[MAX];      // Parent array
-int flag[MAX];   // Visited flag
+int W[MAXN][MAXN]; // Adjacency matrix
+int d[MAXN];      // Distance array
+int p[MAXN];      // Parent array
+int flag[MAXN];   // Visited flag
 int n;           // Number of vertices
 
 void initialize(int src) {
@@ -26,7 +26,9 @@ int extractmin() {
             v = i;
         }
     }
-    if (v != -1) flag[v] = 1;
+    if (v != -1){
+        flag[v] = 1;
+    }
     return v;
 }
 
@@ -68,14 +70,12 @@ int main() {
 
     djikstra(src);
 
-    printf("\nVertex\tDistance from Source\tParent\n");
+    printf("Shortest distances and parents from source %d: ", src);
     for (int i = 0; i < n; i++) {
-        printf("%d\t\t%d\t\t", i, d[i]);
-        if (p[i] == -1) {
-            printf("None\n");
-        } else {
-            printf("%d\n", p[i]);
-        }
+        if (p[i] == -1)
+            printf("[Vertex%d: Distance=%d, Parent=None] ", i, d[i]);
+        else
+            printf("[Vertex%d: Distance=%d, Parent=%d] ", i, d[i], p[i]);
     }
 
     return 0;
